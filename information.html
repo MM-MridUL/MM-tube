@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+      <!-- daisyUi and taiwind css play cdn -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="text-center my-9">
+        <button class="btn" onclick="back()">Back To Home</button>
+    </div>
+   <section class="container mx-auto p-4 grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
+    <div class="bg-gray-200 mb-4 p-4 shadow-2xl">
+        <h1 class="text-3xl font-bold mb-4">Q. Discuss the scope of var, let, and const</h1>
+        <p class="text-xl">In JavaScript, the scope of variables declared using var, let, and const differs significantly. Understanding these differences is essential for writing predictable and bug-free code. Here's a breakdown:</p>
+        <p><span class="text-2xl font-bold">1. var Scope</span>
+            <br>
+            <span class="text-xl font-bold">Function Scope:</span>
+            
+            Variables declared with var are function-scoped. This means that if a variable is declared inside a function, it is only accessible within that function, regardless of block scope (like within an if statement or for loop).</p>
+    
+            <p>
+                <span class="text-xl font-bold">Hoisting:</span>
+    
+                Variables declared with var are hoisted to the top of their function scope, meaning they can be used before they are declared. However, the value will be undefined until the actual assignment.</p>
+    
+                <p><span  class="text-2xl font-bold">2.let Scope</span>
+                    <br>
+                    <span  class="text-xl font-bold">Block Scope:</span>
+                    
+                    Variables declared with let are block-scoped. They are only accessible within the block (e.g., {}) where they are defined. This includes if statements, loops, and other block-level structures.</p>
+                    <p><span class="text-xl font-bold">Hoisting:</span>
+    
+                        Like var, let is also hoisted to the top of its block, but unlike var, it is not initialized. This leads to a "temporal dead zone" (TDZ) where the variable exists but cannot be accessed until the declaration is encountered in the code.</p>
+    
+                        <p><span class="text-2xl font-bold">3. const Scope</span>
+                            <br>
+                            <span class="text-xl font-bold">Block Scope:</span>
+                            
+                            Variables declared with const are also block-scoped, similar to let. This means they are only accessible within the block where they are defined.</p>
+                            <p>
+                               <span class="text-xl font-bold"> Hoisting:
+                            </span>
+                                Like let, const is hoisted to the top of its block but remains in the temporal dead zone until the declaration is encountered.
+                            </p>
+       </div>
+       <div class="bg-gray-200 mb-4 p-4 shadow-2xl">
+        <h1 class="text-3xl font-bold mb-4">Tell us the use cases of null and undefined</h1>
+        <p>In JavaScript, null and undefined are two distinct types that represent the absence of a value, but they are used in different contexts and have different meanings. Understanding when and why to use them is crucial for writing clear and effective code. Here’s a breakdown of their use cases:</p>
+        <p>
+           <span class="text-2xl font-bold"> 1. undefined:</span>
+           <br>
+                   <span class="text-xl font-semibold"> Default Value of Uninitialized Variables:</span>
+
+            When you declare a variable without assigning it a value, it is automatically initialized with undefined.
+        </p>
+        <p>
+           <span class="text-xl font-semibold"> Missing Function Arguments:</span>
+
+            If you call a function without passing all the expected arguments, the missing arguments will be undefined.
+        </p>
+        <p>
+           <span class="text-xl font-semibold"> Non-existent Object Properties:</span>
+
+            Accessing a property that does not exist on an object returns undefined.
+        </p>
+        <p><span class="text-xl font-semibold">Functions Without a Return Statement:</span>
+
+            If a function does not explicitly return a value, it returns undefined by default.</p>
+            <p><span class="text-xl font-semibold">Best Practices:</span>
+
+                undefined is typically used by JavaScript itself, and it’s usually not necessary to assign undefined explicitly in your code. Instead, let it be the default value for uninitialized variables or properties.</p>
+
+                <p><span class="text-2xl font-bold">2. null:</span>
+                    <br>
+                   <span class="text-xl font-semibold"> Intentional Absence of a Value:</span>
+                    
+                    null is explicitly used by developers to indicate that a variable or property should have no value. It's a way of signaling that "this variable should be empty" or "this value is intentionally missing."</p>
+                    <p><span class="text-xl font-semibold">
+                        Resetting or Clearing Variables:
+                    </span>
+
+                        You might assign null to a variable to clear its value, particularly in preparation for future checks or operations.</p>
+                        <p><span class="text-xl font-semibold">DOM Manipulation:</span>
+
+                            In the context of the DOM, null is often used to indicate that a node does not exist.</p>
+                    <p><span class="text-xl font-semibold">JSON and APIs:</span>
+
+                        null is frequently used in JSON data to represent empty values in APIs, databases, or configuration files.</p>
+                        <p><span class="text-xl font-semibold">Best Practices:</span>
+
+                            Use null when you want to explicitly state that a variable should have no value, especially in cases where undefined might be ambiguous or unintentional.</p>        
+       </div>
+
+       <div class="bg-gray-200 mb-4 p-4 shadow-2xl">
+        <h1 class="text-3xl font-bold mb-4">What do you mean by REST API?</h1>
+        <p>A REST API (Representational State Transfer Application Programming Interface) is a set of conventions for designing networked applications. It allows different software systems to communicate with each other over HTTP by using a stateless, client-server, and cacheable communication protocol. REST APIs are widely used for building web services and are an essential part of modern web development.</p>
+        <p class="text-3xl font-bold">Key Concepts of REST API</p>
+        <p class="text-2xl font-semibold">1. REST Principles:</p>
+        <p><span class="text-xl font-semibold">Stateless:</span> Each API request from a client to the server must contain all the information needed to understand and process the request. The server does not store any state about the client between requests.</p>
+        <p><span class="text-xl font-semibold">Client-Server Architecture:</span> The client and server are separate entities. The client sends requests and the server responds with data. This separation allows for scalability and simplicity.</p>
+        <p><span class="text-xl font-semibold">Cacheable:</span> Responses from the server should indicate whether they can be cached by the client. Caching can improve performance and reduce the load on the server.</p>
+        <p><span class="text-xl font-semibold">Uniform Interface:</span> REST APIs have a consistent and standardized interface. This simplifies and decouples the client and server, allowing them to evolve independently.</p>
+        <p><span class="text-xl font-semibold">Layered System:</span> The architecture can be composed of multiple layers, such as load balancers or security layers, without affecting the client’s interaction with the server.</p>
+        <p class="text-2xl font-semibold">2.HTTP Methods:</p>
+        <p>REST APIs use standard HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources. Common methods include:</p>
+        <p> <span class="text-xl font-semibold">GET:</span> Retrieve data from the server. This is a read-only operation.</p>
+        <p><span class="text-xl font-semibold">POST:</span> Submit data to the server to create a new resource.</p>
+        <p><span class="text-xl font-semibold">PUT:</span> Update an existing resource or create a new one if it does not exist.</p>
+        <p><span  class="text-xl font-semibold">DELETE:</span> Remove a resource from the server.</p>
+        <p class="text-2xl font-semibold">1.Resources and URIs:</p>
+        <p><span class="text-xl font-semibold">Resources:</span> In REST, resources are identified by URLs (Uniform Resource Locators). A resource can be any data object or service that the API manages.</p>
+        <p><span class="text-xl font-semibold">URIs (Uniform Resource Identifiers):</span> Resources are accessed using URIs, which uniquely identify each resource.</p>
+
+       </div>
+   </section>
+
+
+   <script src="JS/index.js"></script>
+</body>
+</html>
